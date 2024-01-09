@@ -16,6 +16,10 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the iNotbook app!");
+});
+
 app.listen(port, () => {
   console.log(`\niNotbook app listening on port ${port}`);
 });
