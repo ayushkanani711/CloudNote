@@ -36,7 +36,7 @@ const Signup = () => {
     }
   return (
     <>
-    <h2 className='container my-2 '>Create account to use iNotebook</h2>
+    <h2 className='container my-2 '>Create account to use CloudNote</h2>
     <div className="container my-2">
         <form className='container' onSubmit={handleSubmit} >
         <div className="mb-3">

@@ -4,13 +4,13 @@ const About = () => {
   return (
     <div className="container my-2">
       <h1 className="display-4 text-center mb-4 font-weight-bold">
-        About iNotebook
+        About CloudNote
       </h1>
 
       <section>
         <h2>Our Mission</h2>
         <p>
-          Welcome to iNotebook, where our mission is to empower users by
+          Welcome to CloudNote, where our mission is to empower users by
           providing a seamless and accessible cloud-based note storing web app,
           empowering users to capture, organize, and access their ideas anytime,
           anywhere – all for free.
@@ -20,7 +20,7 @@ const About = () => {
       <section>
         <h2>Who We Are</h2>
         <p>
-          iNotebook is brought to you by a team of passionate individuals who
+          CloudNote is brought to you by a team of passionate individuals who
           love to Build creative webApp.
         </p>
       </section>
