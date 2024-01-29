@@ -7,7 +7,7 @@ const NoteState = (props) => {
   const notesInitial = [];
   // Set Notes
   const [notes, setNotes] = useState(notesInitial);
-  
+
   //show alert message
   const [alert, setAlert] = useState(null);
   const showalert = (message, type) => {
@@ -18,7 +18,7 @@ const NoteState = (props) => {
     setTimeout(() => {
       setAlert(null);
     }, 2000);
-    
+
   };
   const capitalize = (word) => {
     let lower = word.toLowerCase();
@@ -32,7 +32,7 @@ const NoteState = (props) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token')
+        "auth-token": localStorage.getItem('token')
 
       },
     });
@@ -46,7 +46,7 @@ const NoteState = (props) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token')
+        "auth-token": localStorage.getItem('token')
       },
       body: JSON.stringify({ title, description, tag }),
     });
@@ -63,7 +63,7 @@ const NoteState = (props) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token')
+        "auth-token": localStorage.getItem('token')
       },
     });
     // Fetch the updated notes after delet that note
@@ -71,13 +71,13 @@ const NoteState = (props) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token')
+        "auth-token": localStorage.getItem('token')
       },
     });
     const json = await response.json();
     setNotes(json);
     showalert('Note deleted', 'danger')
-  }; 
+  };
 
   // Edit a note
   const editNote = async (id, title, description, tag) => {
@@ -86,7 +86,7 @@ const NoteState = (props) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token')
+        "auth-token": localStorage.getItem('token')
       },
       body: JSON.stringify({ title, description, tag }),
     });
@@ -107,8 +107,8 @@ const NoteState = (props) => {
 
   return (
     <NoteContext.Provider
-      value={{ notes, addNote, deleteNote, editNote, getNotes, showalert , capitalize , alert, setAlert }} >
-            {props.children}
+      value={{ notes, addNote, deleteNote, editNote, getNotes, showalert, capitalize, alert, setAlert }} >
+      {props.children}
     </NoteContext.Provider>
   );
 };
