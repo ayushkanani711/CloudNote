@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import NoteContext from "./noteContext.jsx";
 
 const NoteState = (props) => {
-  const host = "http://localhost:4000";
+  // const host = "http://localhost:4000";
+  const host = "https://i-notebook-backend-omega.vercel.app";
 
   const notesInitial = [];
   // Set Notes
