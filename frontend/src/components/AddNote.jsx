@@ -17,7 +17,7 @@ const AddNote = () => {
   useEffect(() => {
     const fetchName = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/auth/getuser`, {
+        const response = await fetch(`https://i-notebook-backend-omega.vercel.app/api/auth/getuser`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
